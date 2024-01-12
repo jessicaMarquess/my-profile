@@ -6,7 +6,12 @@ export default {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['Noto Sans', 'sans-serif'],
+        'roboto-mono': ['Roboto Mono', 'monospace'],
+      }
+    },
   },
   plugins: [],
 }

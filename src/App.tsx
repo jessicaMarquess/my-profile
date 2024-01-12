@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
+import Header from './components/Header';
 
 export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : 'dark');
@@ -44,9 +44,8 @@ export default function App() {
 
   return (
     <div className={`w-screen h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
-      <div className="p-4">
-        <ThemeToggle toggleTheme={toggleTheme} theme={theme || ''} />
-      </div>
+      <Header toggleTheme={toggleTheme} theme={theme || ''} />
+      <div className='border border-x-0 border-t-0 border-purple-400' />
       <div className="mt-10 lg:mt-40 lg:mx-4 w-full flex flex-col items-center">
         <img src="https://media.tenor.com/mhLPO2VldCkAAAAM/0001.gif" className=" w-80 h-80 pb-6" />
         <h1 className={`text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 font-sans text-3xl`}>Oi! Meu nome é <strong className="text-purple-500 pb-2">Jessica 🙃</strong></h1>
