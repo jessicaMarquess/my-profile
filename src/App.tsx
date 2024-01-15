@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
+import Welcome from './components/Welcome';
+import SocialMedias from './components/SocialMedias';
 
 export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : 'dark');
@@ -43,15 +45,16 @@ export default function App() {
   }, [darkQuery]);
 
   return (
-    <div className={`w-screen h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
+    <div className={` w-screen h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
       <Header toggleTheme={toggleTheme} theme={theme || ''} />
-      <div className='border border-x-0 border-t-0 border-purple-400' />
-      <div className="mt-10 lg:mt-40 lg:mx-4 w-full flex flex-col items-center">
-        <img src="https://media.tenor.com/mhLPO2VldCkAAAAM/0001.gif" className=" w-80 h-80 pb-6" />
-        <h1 className={`text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 font-sans text-3xl`}>Oi! Meu nome é <strong className="text-purple-500 pb-2">Jessica 🙃</strong></h1>
-
-        <p className={`text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-center`}>Esta página ainda está em desenvolvimento ⚒️. <br />Enquanto isso, que tal olhar meus repositórios no <a className={`font-bold text-${theme === 'dark' ? 'purple-300' : 'purple-400'} hover:underline`} href="https://github.com/jessicaMarquess" target="_blank"> github</a>??</p>
+      <Welcome theme={String(theme)} />
+      <div className='mx-4 lg:w-[67.5rem] lg:mx-auto'>
+        <SocialMedias theme={String(theme)} />
       </div>
+      <p className={`mt-20 lg:mt-40 text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl mx-4 lg:mx-auto`}>
+        Esse site ainda está em <span className='text-red-500'>desenvolvimento⚒️⚒️</span>.
+      </p>
+      <iframe src="https://giphy.com/embed/xZsLh7B3KMMyUptD9D" width="480" height="270" className="mt-2 mx-4 lg:mx-auto giphy-embed" allowFullScreen></iframe><p></p>
     </div>
   );
 }
