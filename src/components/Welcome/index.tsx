@@ -15,7 +15,7 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
         <div>
           <animated.h1
             style={styles}
-            className={`text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 font-roboto-mono text-6xl mb-2`}
+            className={`text-slate-700  dark:text-slate-300 font-roboto-mono text-6xl mb-2`}
           >
             Oi! Meu nome é {' '}<br className='hidden lg:inline' />
             <strong className="text-purple-500 pb-2">
