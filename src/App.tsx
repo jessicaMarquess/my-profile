@@ -45,7 +45,7 @@ export default function App() {
   }, [darkQuery]);
 
   return (
-    <div className={` w-screen h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
+    <div className={`w-screen h-full sm:h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
       <Header toggleTheme={toggleTheme} theme={theme || ''} />
       <Welcome theme={String(theme)} />
       <div className='mx-4 lg:w-[67.5rem] lg:mx-auto'>
@@ -54,7 +54,7 @@ export default function App() {
       <p className={`mt-20 lg:mt-40 text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl mx-4 lg:mx-auto`}>
         Esse site ainda está em <span className='text-red-500'>desenvolvimento⚒️⚒️</span>.
       </p>
-      <iframe src="https://giphy.com/embed/xZsLh7B3KMMyUptD9D" width="480" height="270" className="mt-2 mx-4 lg:mx-auto giphy-embed" allowFullScreen></iframe><p></p>
+      <iframe src="https://giphy.com/embed/xZsLh7B3KMMyUptD9D" className="mt-2 mb-40 mx-4 lg:mx-auto giphy-embed" allowFullScreen></iframe><p></p>
     </div>
   );
 }
