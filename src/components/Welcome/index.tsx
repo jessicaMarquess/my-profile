@@ -23,7 +23,7 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
           <p
             className={`text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl`}
           >
-            Sou Desenvolvedora
+            Sou Desenvolvedora{' '}
             <span className="text-purple-500 pb-2"> Front-End</span>.
           </p>
         </div>

@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Welcome from './components/Welcome'
 import SocialMedias from './components/SocialMedias'
+import Footer from './components/Footer'
 
 export default function App() {
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark',
   )
-
-  const currentYear = new Date().getFullYear()
 
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
   const element = document.documentElement
@@ -60,9 +59,7 @@ export default function App() {
         <Header toggleTheme={toggleTheme} theme={theme || ''} />
         <Welcome theme={String(theme)} />
         <SocialMedias theme={String(theme)} />
-        <footer className="border border-x-0 border-b-0 border-slate-700 dark:border-slate-300 text-center p-4 fixed bottom-0 w-full text-slate-700 dark:text-slate-300">
-          Jessica Marques - {currentYear}
-        </footer>
+        <Footer />
       </div>
     </>
   )
