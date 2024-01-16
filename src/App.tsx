@@ -46,18 +46,13 @@ export default function App() {
 
   return (
     <>
-      <div className={`w-screen h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
+      <div className={`relative min-h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
         <Header toggleTheme={toggleTheme} theme={theme || ''} />
         <Welcome theme={String(theme)} />
-
         <SocialMedias theme={String(theme)} />
-        <p className={` text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl mx-4 lg:mx-auto`}>
-          Esse site ainda está em <span className='text-red-500'>desenvolvimento⚒️⚒️</span>.
-        </p>
-
-        <div className='bg-slate-300 dark:bg-black flex justify-center'>
-          <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTdsZDhtNzV6M2pyenFhcnYyMTdqN2JkNXZhZmQyZ2lhbzZvcHljbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f7b9ltJ4FrhnsKjYx2/giphy.gif" />
-        </div>
+        <footer className='border border-x-0 border-b-0 border-slate-700 dark:border-slate-300text-center p-4 fixed bottom-0 w-full text-slate-700 dark:text-slate-300 text-center'>
+          FOOTER - MAS AINDA NÃO SEI O QUE COLOCAR AQUI RS
+        </footer>
       </div>
     </>
   );
