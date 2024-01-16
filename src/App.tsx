@@ -45,16 +45,20 @@ export default function App() {
   }, [darkQuery]);
 
   return (
-    <div className={`w-screen h-full sm:h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
-      <Header toggleTheme={toggleTheme} theme={theme || ''} />
-      <Welcome theme={String(theme)} />
-      <div className='mx-4 lg:w-[67.5rem] lg:mx-auto'>
+    <>
+      <div className={`w-screen h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}>
+        <Header toggleTheme={toggleTheme} theme={theme || ''} />
+        <Welcome theme={String(theme)} />
+
         <SocialMedias theme={String(theme)} />
+        <p className={` text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl mx-4 lg:mx-auto`}>
+          Esse site ainda está em <span className='text-red-500'>desenvolvimento⚒️⚒️</span>.
+        </p>
+
+        <div className='bg-slate-300 dark:bg-black flex justify-center'>
+          <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTdsZDhtNzV6M2pyenFhcnYyMTdqN2JkNXZhZmQyZ2lhbzZvcHljbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f7b9ltJ4FrhnsKjYx2/giphy.gif" />
+        </div>
       </div>
-      <p className={`mt-20 lg:mt-40 text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl mx-4 lg:mx-auto`}>
-        Esse site ainda está em <span className='text-red-500'>desenvolvimento⚒️⚒️</span>.
-      </p>
-      <iframe src="https://giphy.com/embed/xZsLh7B3KMMyUptD9D" className="mt-2 mb-40 mx-4 lg:mx-auto giphy-embed" allowFullScreen></iframe><p></p>
-    </div>
+    </>
   );
 }
