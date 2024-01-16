@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import Header from './components/Header'
-import Welcome from './components/Welcome'
-import SocialMedias from './components/SocialMedias'
+
 import Footer from './components/Footer'
+import { Router } from './Router'
+import { BrowserRouter } from 'react-router-dom'
 
 export default function App() {
   const [theme, setTheme] = useState(
@@ -57,8 +58,9 @@ export default function App() {
         className={`relative min-h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}
       >
         <Header toggleTheme={toggleTheme} theme={theme || ''} />
-        <Welcome theme={String(theme)} />
-        <SocialMedias theme={String(theme)} />
+        <BrowserRouter>
+          <Router theme={theme || ''} />
+        </BrowserRouter>
         <Footer />
       </div>
     </>
