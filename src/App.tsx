@@ -5,6 +5,7 @@ import SocialMedias from './components/SocialMedias';
 
 export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : 'dark');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
