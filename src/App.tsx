@@ -50,7 +50,7 @@ export default function App() {
         <Header toggleTheme={toggleTheme} theme={theme || ''} />
         <Welcome theme={String(theme)} />
         <SocialMedias theme={String(theme)} />
-        <footer className='border border-x-0 border-b-0 border-slate-700 dark:border-slate-300text-center p-4 fixed bottom-0 w-full text-slate-700 dark:text-slate-300 text-center'>
+        <footer className='border border-x-0 border-b-0 border-slate-700 dark:border-slate-300 text-center p-4 fixed bottom-0 w-full text-slate-700 dark:text-slate-300'>
           FOOTER - MAS AINDA NÃO SEI O QUE COLOCAR AQUI RS
         </footer>
       </div>
