@@ -13,7 +13,7 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
       <Welcome theme={String(theme)} />
       <SocialMedias theme={String(theme)} />
       <section className="flex justify-center">
-        <div className="mx-4 sm:w-[67.5rem] sm:flex flex-col mt-20">
+        <div className="mx-4 sm:w-[67.5rem] sm:flex flex-col mt-10">
           <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl">
             Sobre a Jessica{' '}
             <span className="text-xs italic hidden sm:inline">
@@ -44,7 +44,7 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
               />
             </a>
           </div>
-          <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl mt-20">
+          <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl mt-10">
             Projetos
           </h1>
           <p className="text-slate-700 dark:text-slate-300">

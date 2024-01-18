@@ -11,7 +11,7 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
 
   return (
     <div className="flex justify-center">
-      <div className="mx-4 lg:w-[67.5rem] mt-5 lg:mt-20 lg:mx-4 lg:flex justify-between items-center">
+      <div className="mx-4 lg:w-[67.5rem] mt-5 lg:mt-10 lg:mx-4 lg:flex justify-between items-center">
         <div>
           <animated.h1
             style={styles}
