@@ -3,7 +3,7 @@ import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 const NotFound = () => {
   return (
     <div className="flex justify-center">
-      <div className="w-[67.5rem] p-4 pr-0 lg:pr-4 flex flex-col justify-center mb-1">
+      <div className="w-[67.5rem] p-4 lg:px-0 py-4  flex flex-col justify-center mb-1">
         <h1 className="text-slate-700 dark:text-slate-300 text-4xl font-roboto-mono pb-3">
           Página não encontrada 😐
         </h1>
