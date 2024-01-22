@@ -1,6 +1,5 @@
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 import Welcome from '../../components/Welcome'
-import SocialMedias from '../../components/SocialMedias'
 import React from 'react'
 
 interface ThemeHomeProps {
@@ -46,9 +45,7 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
           <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl mt-10">
             Projetos
           </h1>
-          <p className="text-slate-700 dark:text-slate-300">
-            Aqui ficarão os projetos
-          </p>
+          <p className="text-slate-700 dark:text-slate-300">Em construção ⚒️</p>
         </div>
       </section>
     </>
