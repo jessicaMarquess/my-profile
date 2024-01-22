@@ -11,16 +11,15 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
   return (
     <>
       <Welcome theme={String(theme)} />
-      <SocialMedias theme={String(theme)} />
       <section className="flex justify-center">
-        <div className="mx-4 sm:w-[67.5rem] sm:flex flex-col mt-10">
+        <div className="lg:mx-4 lg:w-[67.5rem] flex flex-col mt-10">
           <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl">
             Sobre a Jessica{' '}
-            <span className="text-xs italic hidden sm:inline">
+            <span className="text-xs italic hidden lg:inline">
               (sim, estou falando em terceira pessoa)
             </span>
           </h1>
-          <div className="flex gap-x-10 mt-3 sm:mt-0">
+          <div className="flex gap-x-4 md:gap-x-10 lg:mt-3 mt-0">
             <a
               className="inline-flex items-center text-purple-400 font-roboto-mono cursor-pointer  hover:underline"
               href="/perfil-pessoal"

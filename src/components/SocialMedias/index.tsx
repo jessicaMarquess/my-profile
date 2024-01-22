@@ -12,8 +12,8 @@ interface ThemeSocialMediasProps {
 
 const SocialMedias: React.FC<ThemeSocialMediasProps> = ({ theme }) => {
   return (
-    <div className="mx-4 lg:w-[67.5rem] lg:mx-auto">
-      <div className="xl:-ml-3">
+    <div className="mx-4 lg:w-[67.5rem] lg:mx-auto flex">
+      <div className="lg:-ml-3">
         <SocialIcon
           bgColor="transparent"
           fgColor={`${theme === 'dark' ? 'white' : '#4b5563'}`}

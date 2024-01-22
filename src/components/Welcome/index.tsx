@@ -1,4 +1,5 @@
 import { useSpring, animated } from 'react-spring'
+import SocialMedias from '../SocialMedias'
 interface ThemeWelcomeProps {
   theme: string
 }
@@ -10,12 +11,12 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
   })
 
   return (
-    <div className="flex justify-center">
-      <div className="mx-4 lg:w-[67.5rem] mt-5 lg:mt-10 lg:mx-4 lg:flex justify-between items-center">
+    <div className="flex justify-center lg:w-[67.5rem] mx-auto flex-col">
+      <div className="mx-4 lg:mx-0 mt-5 lg:mt-10 lg:flex justify-between items-center">
         <div>
           <animated.h1
             style={styles}
-            className={`text-slate-700  dark:text-slate-300 font-roboto-mono text-6xl mb-2`}
+            className={`text-slate-700  dark:text-slate-300 font-roboto-mono text-5xl lg:text-6xl mb-2 `}
           >
             Oi! Meu nome é <br className="hidden lg:inline" />
             <strong className="text-purple-500 pb-2">Jessica</strong>.
@@ -24,10 +25,16 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
             className={`text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl`}
           >
             Sou Desenvolvedora{' '}
-            <span className="text-purple-500 pb-2"> Front-End</span>.
+            <span className="text-purple-500 pb-2">
+              {' '}
+              <br className="lg:hidden" />
+              Front-End
+            </span>
+            .
           </p>
         </div>
       </div>
+      <SocialMedias theme={theme} />
     </div>
   )
 }
