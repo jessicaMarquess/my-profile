@@ -10,8 +10,8 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
   return (
     <>
       <Welcome theme={String(theme)} />
-      <section className="flex justify-center">
-        <div className="lg:mx-4 lg:w-[67.5rem] flex flex-col mt-10">
+      <section className="flex mx-2 lg:justify-center lg:mx-0">
+        <div className="lg:mx-4 lg:w-[67.5rem] flex flex-col mt-10 ">
           <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl">
             Sobre a Jessica{' '}
             <span className="text-xs italic hidden lg:inline">
