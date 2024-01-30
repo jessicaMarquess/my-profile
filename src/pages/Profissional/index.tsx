@@ -59,7 +59,7 @@ export const Profissional = () => {
       </div>
       <a
         className="hidden sm:inline-flex items-center text-purple-400 font-roboto-mono cursor-pointer hover:underline self-start sm:ml-[200px]"
-        href="/CV___versão_ptbr.pdf" // Caminho absoluto ou relativo ao diretório 'public'
+        href="/CV___versão_ptbr.pdf"
         download="CV___versão_ptbr.pdf"
       >
         <ArrowDownTrayIcon
