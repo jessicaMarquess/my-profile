@@ -19,7 +19,7 @@ export const Profissional = () => {
       </animated.h1>
       <a
         className="ml-4 mt-3 lg:mt-0 inline-flex sm:hidden items-center text-purple-400 font-roboto-mono cursor-pointer hover:underline self-start lg:ml-[200px]"
-        href="../../../public/"
+        href="/CV___versão_ptbr.pdf" // Caminho absoluto ou relativo ao diretório 'public'
         download="CV___versão_ptbr.pdf"
       >
         <ArrowDownTrayIcon
@@ -59,7 +59,7 @@ export const Profissional = () => {
       </div>
       <a
         className="hidden sm:inline-flex items-center text-purple-400 font-roboto-mono cursor-pointer hover:underline self-start sm:ml-[200px]"
-        href="../../../public/"
+        href="/CV___versão_ptbr.pdf" // Caminho absoluto ou relativo ao diretório 'public'
         download="CV___versão_ptbr.pdf"
       >
         <ArrowDownTrayIcon
