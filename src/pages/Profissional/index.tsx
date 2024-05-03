@@ -17,17 +17,17 @@ export const Profissional = () => {
     <section className="rounded-lg mx-auto flex flex-col justify-center items-center max-w-[1090px]">
       <animated.h1
         style={styles}
-        className="text-purple-400 text-4xl self-start font-roboto-mono ml-4 lg:ml-0 mt-2 lg:mt-10"
+        className="text-purple-500 text-4xl self-start font-roboto-mono ml-4 lg:ml-0 mt-2 lg:mt-10"
       >
         Perfil Profissional
       </animated.h1>
       <a
-        className="ml-4 mt-3 lg:mt-0 inline-flex sm:hidden items-center text-purple-400 font-roboto-mono cursor-pointer hover:underline self-start lg:ml-[200px]"
+        className="ml-4 mt-3 lg:mt-0 inline-flex sm:hidden items-center text-purple-500 font-roboto-mono cursor-pointer hover:underline self-start lg:ml-[200px]"
         href={DOWNLOAD_LINK}
         download="CV___versão_ptbr.pdf"
       >
         <ArrowDownTrayIcon
-          className="text-purple-400 mr-2"
+          className="text-purple-500 mr-2"
           width={16}
           height={16}
         />
@@ -65,12 +65,12 @@ export const Profissional = () => {
         </div>
       </div>
       <a
-        className="hidden sm:inline-flex items-center text-purple-400 font-roboto-mono cursor-pointer hover:underline self-start sm:ml-[200px]"
+        className="hidden sm:inline-flex items-center text-purple-500 font-roboto-mono cursor-pointer hover:underline self-start sm:ml-[200px]"
         href={DOWNLOAD_LINK}
         download="CV___versão_ptbr.pdf"
       >
         <ArrowDownTrayIcon
-          className="text-purple-400 mr-2"
+          className="text-purple-500 mr-2"
           width={16}
           height={16}
         />

@@ -9,7 +9,7 @@ const NotFound = () => {
         </h1>
         <a
           href="/"
-          className="inline-flex items-center text-purple-400 font-roboto-mono cursor-pointer  hover:underline pb-4"
+          className="inline-flex items-center text-purple-500 font-roboto-mono cursor-pointer  hover:underline pb-4"
         >
           Voltar para a página inicial
           <ArrowUpRightIcon className=" ml-1" width={16} height={16} />

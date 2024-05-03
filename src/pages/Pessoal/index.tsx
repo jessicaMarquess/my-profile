@@ -10,7 +10,7 @@ export const Pessoal = () => {
     <section className="mx-auto flex flex-col justify-center items-center  max-w-[800px]">
       <animated.h1
         style={styles}
-        className="text-purple-400 text-4xl self-start font-roboto-mono ml-4 lg:ml-0 mt-2 lg:mt-10"
+        className="text-purple-500 text-4xl self-start font-roboto-mono ml-4 lg:ml-0 mt-2 lg:mt-10"
       >
         Oi, prazer! Me chamo Jessica 🙃
       </animated.h1>

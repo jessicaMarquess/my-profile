@@ -25,7 +25,7 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
           </h1>
           <div className="flex gap-x-4 md:gap-x-10 lg:mt-3 mt-0">
             <a
-              className="inline-flex items-center text-purple-400 font-roboto-mono cursor-pointer  hover:underline"
+              className="inline-flex items-center text-purple-500 font-roboto-mono cursor-pointer  hover:underline"
               href="/perfil-pessoal"
             >
               Perfil Pessoal
@@ -36,7 +36,7 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
               />
             </a>
             <a
-              className="inline-flex items-center text-purple-400 font-roboto-mono cursor-pointer  hover:underline"
+              className="inline-flex items-center text-purple-500 font-roboto-mono cursor-pointer  hover:underline"
               href="/perfil-profissional"
             >
               Perfil Profissional
