@@ -6,7 +6,7 @@ import './style.css'
 const DOWNLOAD_LINK = '/CV___versão_ptbr.pdf'
 const DOWNLOAD_TEXT = 'Baixar meu currículo'
 
-export const Profissional = () => {
+export const ProfessionalProfile = () => {
   const styles = useSpring({
     from: { opacity: 0, transform: 'translateX(-800px)' },
     to: { opacity: 1, transform: 'translateX(0)' },

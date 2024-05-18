@@ -1,6 +1,6 @@
 import { useSpring, animated } from 'react-spring'
 
-export const Pessoal = () => {
+export const PessoalProfile = () => {
   const styles = useSpring({
     from: { opacity: 0, transform: 'translateX(-800px)' },
     to: { opacity: 1, transform: 'translateX(0)' },
