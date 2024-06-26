@@ -12,7 +12,7 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
 
   return (
     <div className="flex justify-center lg:w-[67.5rem] mx-auto flex-col">
-      <div className="mx-4 lg:mx-0 mt-5 lg:mt-10 lg:flex justify-between items-center">
+      <div className="mx-4 lg:mx-0 mt-5 lg:mt-5 lg:flex justify-between items-center">
         <div>
           <animated.h1
             style={styles}
@@ -24,11 +24,11 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
           <p
             className={`text-${theme === 'dark' ? 'white' : 'slate-700'} dark:text-slate-300 text-3xl`}
           >
-            Sou Desenvolvedora{' '}
+            Sou desenvolvedora{' '}
             <span className="text-purple-500 pb-2">
               {' '}
               <br className="lg:hidden" />
-              Front-End
+              front-end
             </span>
             .
           </p>

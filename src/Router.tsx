@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
-import { Profissional } from './pages/Profissional'
-import { Pessoal } from './pages/Pessoal'
+import { ProfessionalProfile } from './pages/ProfessionalProfile'
+import { PessoalProfile } from './pages/PessoalProfile'
 import React from 'react'
 import NotFound from './pages/NotFound'
 
@@ -14,8 +14,8 @@ export const Router: React.FC<ThemeProps> = ({ theme }) => {
     <div>
       <Routes>
         <Route path="/" element={<Home theme={theme} />} />
-        <Route path="/perfil-profissional" element={<Profissional />} />
-        <Route path="/perfil-pessoal" element={<Pessoal />} />
+        <Route path="/perfil-profissional" element={<ProfessionalProfile />} />
+        <Route path="/perfil-pessoal" element={<PessoalProfile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

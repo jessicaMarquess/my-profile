@@ -1,6 +1,6 @@
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 
-interface ProjectsCardProps {
+export interface ProjectsCardProps {
   title: string
   link: string
   img: string
