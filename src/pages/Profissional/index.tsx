@@ -3,7 +3,7 @@ import imgProfile from '../../../public/my-profile.webp'
 import { useSpring, animated } from 'react-spring'
 import './style.css'
 
-const DOWNLOAD_LINK = '/CV___versão_ptbr.pdf'
+const DOWNLOAD_LINK = '/CV___versão_ptbr-1.pdf'
 const DOWNLOAD_TEXT = 'Baixar meu currículo'
 
 export const Profissional = () => {
