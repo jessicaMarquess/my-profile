@@ -43,7 +43,7 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
           <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-xl lg:text-2xl">
             Sobre mim
           </h1>
-          <div className="flex gap-x-4 md:gap-x-10 lg:mt-3 mt-0">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 lg:mt-3 mt-2">
             <ProfileLink title="Perfil Pessoal" href="/perfil-pessoal" />
             <ProfileLink
               title="Perfil Profissional"

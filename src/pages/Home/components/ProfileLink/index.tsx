@@ -13,9 +13,9 @@ const ProfileLink: React.FC<ProfileLinkProps> = ({ title, href }) => {
     >
       {title}
       <ArrowUpRightIcon
-        className="ml-1 hidden sm:inline"
-        width={16}
-        height={16}
+        className="ml-1 hidden sm:inline "
+        width={20}
+        height={20}
       />
     </a>
   )
