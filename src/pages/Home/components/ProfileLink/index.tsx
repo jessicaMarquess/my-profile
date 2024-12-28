@@ -1,7 +1,7 @@
-import { ArrowUpRightIcon } from "@heroicons/react/20/solid"
+import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 
 interface ProfileLinkProps {
-  title: string,
+  title: string
   href: string
 }
 
