@@ -28,7 +28,7 @@ const Welcome: React.FC<ThemeWelcomeProps> = ({ theme }) => {
             <span className="text-purple-500 pb-2">
               {' '}
               <br className="lg:hidden" />
-              front-end
+              full-stack
             </span>
             .
           </p>
