@@ -38,9 +38,9 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
   return (
     <>
       <Welcome theme={String(theme)} />
-      <section className="flex mx-2 lg:justify-center lg:mx-0">
+      <section className="flex mx-4 lg:justify-center lg:mx-0">
         <div className="lg:mx-4 lg:w-[67.5rem] flex flex-col mt-4">
-          <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl">
+          <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-xl lg:text-2xl">
             Sobre mim
           </h1>
           <div className="flex gap-x-4 md:gap-x-10 lg:mt-3 mt-0">
@@ -50,7 +50,7 @@ export const Home: React.FC<ThemeHomeProps> = ({ theme }) => {
               href="/perfil-profissional"
             />
           </div>
-          <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-3xl mt-6">
+          <h1 className="text-slate-700 dark:text-slate-300 font-roboto-mono text-xl lg:text-2xl mt-6">
             Projetos{' '}
             <span className="text-xs italic hidden lg:inline">
               (acesse meu reposítório no github para mais 😊)
