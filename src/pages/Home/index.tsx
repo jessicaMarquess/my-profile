@@ -1,5 +1,5 @@
 import { ArrowDownTrayIcon, ArrowUpRightIcon } from '@heroicons/react/20/solid'
-import { useSpring, animated } from 'react-spring'
+import { animated, useSpring } from 'react-spring'
 import profileImage from '../../../public/profile-github.jpg'
 
 const projects = [
@@ -68,9 +68,7 @@ export const Home = () => {
       <animated.section style={hero} className="portfolio-hero">
         <div className="hero-copy">
           <p className="hero-intro">Jessica Marques</p>
-          <h1>
-            Produtos digitais sólidos, da interface à arquitetura.
-          </h1>
+          <h1>Produtos digitais sólidos, da interface à arquitetura.</h1>
           <p className="hero-summary">
             Desenvolvedora Full Stack Pleno com foco em front-end, Design
             Systems e arquitetura de aplicações. Transformo necessidades de
@@ -100,7 +98,10 @@ export const Home = () => {
         </aside>
       </animated.section>
 
-      <section id="projetos" className="portfolio-section portfolio-section--projects">
+      <section
+        id="projetos"
+        className="portfolio-section portfolio-section--projects"
+      >
         <div className="section-heading">
           <h2>Projetos que mostram como eu trabalho.</h2>
           <p>
@@ -111,7 +112,10 @@ export const Home = () => {
 
         <div className="project-grid">
           {projects.map((project) => (
-            <article className={`project-card ${project.tone}`} key={project.name}>
+            <article
+              className={`project-card ${project.tone}`}
+              key={project.name}
+            >
               <div className="project-card__topline">
                 <span>{project.kind}</span>
                 <a
@@ -132,7 +136,10 @@ export const Home = () => {
         </div>
       </section>
 
-      <section id="experiencia" className="portfolio-section experience-section">
+      <section
+        id="experiencia"
+        className="portfolio-section experience-section"
+      >
         <div className="section-heading">
           <h2>Profundidade técnica que acompanha o produto.</h2>
           <p>
@@ -155,7 +162,8 @@ export const Home = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Conhecer trajetória no LinkedIn <ArrowUpRightIcon aria-hidden="true" />
+              Conhecer trajetória no LinkedIn{' '}
+              <ArrowUpRightIcon aria-hidden="true" />
             </a>
           </div>
           <ul className="capability-list">
@@ -173,7 +181,10 @@ export const Home = () => {
           completa de produto.
         </h2>
         <div className="contact-actions">
-          <a className="button button--light" href="mailto:jessica.marques.dev@gmail.com">
+          <a
+            className="button button--light"
+            href="mailto:jessica.marques.dev@gmail.com"
+          >
             Enviar e-mail <ArrowUpRightIcon aria-hidden="true" />
           </a>
           <a
