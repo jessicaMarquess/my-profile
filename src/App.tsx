@@ -55,11 +55,14 @@ export default function App() {
   return (
     <>
       <div
-        className={`relative min-h-screen ${theme === 'dark' ? 'dark' : ''} bg-slate-200 dark:bg-black flex flex-col duration-100`}
+        className={`min-h-screen ${theme === 'dark' ? 'dark' : ''} bg-[#f4f4f0] text-[#16212b] dark:bg-[#10181f] dark:text-slate-100`}
       >
+        <a className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:p-3 focus:text-slate-900" href="#conteudo">
+          Pular para o conteúdo
+        </a>
         <Header toggleTheme={toggleTheme} theme={theme || ''} />
         <BrowserRouter>
-          <Router theme={theme || ''} />
+          <Router />
         </BrowserRouter>
         <Footer />
       </div>
