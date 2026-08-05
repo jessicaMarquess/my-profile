@@ -72,7 +72,7 @@ a { color: inherit; }
 .hero-intro, .project-card__topline span, .project-card__stack, .contact-section > p {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
