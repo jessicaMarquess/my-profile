@@ -22,9 +22,10 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; font-weight: 6
 ::selection { background: var(--color-primary); color: var(--color-action-ink); }
 .container { width: min(100% - var(--page-gutter) * 2, var(--content-width)); margin-inline: auto; }
 .site-frame { overflow: clip; }
+html.mobile-menu-open { overflow: hidden; }
 .skip-link { position: fixed; left: var(--space-4); top: var(--space-4); z-index: 100; padding: var(--space-3) var(--space-4); background: var(--color-panel); transform: translateY(-200%); }
 .skip-link:focus { transform: none; }
-.section { padding-block: var(--space-9); border-top: 1px solid var(--color-line); scroll-margin-top: 6rem; }
+.section { padding-block: var(--space-9); border-top: 1px solid var(--color-line); }
 .section-heading { max-width: 720px; margin-bottom: var(--space-7); }
 .section-heading h2 { font-size: clamp(2rem, 3.4vw, 3.3rem); letter-spacing: -0.04em; }
 .section-heading > p:last-child { color: var(--color-muted); margin-top: var(--space-4); max-width: 60ch; }

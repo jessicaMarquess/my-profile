@@ -18,7 +18,7 @@ const links = [
     </a>
     <div class="header-controls">
       <ThemeToggle />
-      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu" hidden><Icon name="menu" /></button>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu" hidden><Icon name="menu" class="menu-open-icon" /><Icon name="close" class="menu-close-icon" /></button>
     </div>
     <nav id="main-navigation" aria-label="Navegação principal">
       {links.map(link => <a href={home ? `#${link.id}` : `/#${link.id}`} data-section={link.id}><Icon name={link.icon} />{link.label}</a>)}
@@ -39,12 +39,20 @@ const links = [
   nav a:hover::after, nav a[aria-current]::after { transform: scaleX(1); }
   .header-controls { display: flex; gap: var(--space-2); order: 3; }
   .menu-toggle { width: 44px; height: 44px; display: grid; place-items: center; color: var(--color-ink); border: 1px solid var(--color-line); border-radius: var(--radius-sm); }
+  .menu-toggle :global(.menu-close-icon), .menu-toggle[aria-expanded="true"] :global(.menu-open-icon) { display: none; }
+  .menu-toggle[aria-expanded="true"] :global(.menu-close-icon) { display: inline-flex; }
   @media (max-width: 1100px) {
     .header-inner { flex-wrap: wrap; justify-content: space-between; gap: 0; min-height: 76px; }
     .header-controls { order: 0; }
     nav { width: 100%; order: 3; margin: 0; padding-block: var(--space-4); gap: var(--space-3); flex-wrap: wrap; }
     nav a { min-height: 44px; padding-inline: var(--space-3); }
     nav a::after { bottom: 0; }
+    .site-header[data-menu-open] { background: var(--color-canvas); }
+    .site-header[data-menu-open] nav { position: fixed; inset: 76px 0 0; width: 100%; display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: var(--space-2); padding: var(--space-6) var(--page-gutter) max(var(--space-6), env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; background: var(--color-canvas); border-top: 1px solid var(--color-line); }
+    .site-header[data-menu-open] nav a { flex-shrink: 0; min-height: 64px; gap: var(--space-4); padding: var(--space-4); font-family: var(--font-display); font-size: 1.25rem; border-radius: var(--radius-sm); }
+    .site-header[data-menu-open] nav a[aria-current] { background: var(--color-panel); }
+    .site-header[data-menu-open] nav a::after { inset: var(--space-4) auto var(--space-4) 0; width: 2px; height: auto; }
+    .site-header[data-menu-open] nav a:hover { background: var(--color-panel); }
   }
   @media (max-width: 480px) { .site-brand { font-size: 0.9rem; gap: var(--space-2); } .brand-suffix { display: none; } .brand-icon { width: 1.8rem; height: 1.8rem; } }
 </style>

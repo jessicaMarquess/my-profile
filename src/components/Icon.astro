@@ -17,10 +17,11 @@ import github from '@tabler/icons/outline/brand-github.svg?raw'
 import linkedin from '@tabler/icons/outline/brand-linkedin.svg?raw'
 import file from '@tabler/icons/outline/file-text.svg?raw'
 import menu from '@tabler/icons/outline/menu-2.svg?raw'
+import close from '@tabler/icons/outline/x.svg?raw'
 import shield from '@tabler/icons/outline/shield-check.svg?raw'
 import player from '@tabler/icons/outline/player-play.svg?raw'
 
-const icons = { paw, 'arrow-up-right': arrow, download, sun, moon, home, user, gamepad, stack, mail, code, target, hourglass, github, linkedin, file, menu, shield, player }
+const icons = { paw, 'arrow-up-right': arrow, download, sun, moon, home, user, gamepad, stack, mail, code, target, hourglass, github, linkedin, file, menu, close, shield, player }
 export type IconName = keyof typeof icons
 interface Props extends HTMLAttributes<'span'> { name: IconName }
 const { name, ...attributes } = Astro.props

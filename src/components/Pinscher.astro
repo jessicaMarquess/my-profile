@@ -18,5 +18,7 @@ import Icon from './Icon.astro'
   p { min-height: 3.4em; font: 0.65rem/1.7 var(--font-mono); color: var(--color-accent); background: var(--color-overlay); border-radius: var(--radius-sm); margin-top: var(--space-2); padding-inline: var(--space-3); }
   p:empty { visibility: hidden; }
   @media (prefers-reduced-motion: no-preference) { button:hover :global(svg), button:focus-visible :global(svg) { transform: rotate(-8deg); transition: transform var(--motion-normal); } }
-  @media (max-width: 700px) { .security { left: var(--page-gutter); bottom: var(--space-3); } }
+  @media (max-width: 700px) {
+    .security { position: static; width: auto; margin: var(--space-3) var(--page-gutter) 0; }
+  }
 </style>

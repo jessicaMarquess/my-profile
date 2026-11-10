@@ -2,7 +2,7 @@ export const experience = [
   {
     company: 'Serena Energia',
     role: 'Desenvolvedora Full Stack Pleno',
-    period: 'Desde 2023 · na empresa desde 2021',
+    period: 'Na empresa desde 2021 · pleno desde 2023',
     description: 'Evolução de interfaces, integrações e arquitetura de aplicações. Participação no Design System e em iniciativas de dados de engenharia com DevLake.',
     technologies: ['React', 'TypeScript', 'Node.js', 'Design Systems'],
   },

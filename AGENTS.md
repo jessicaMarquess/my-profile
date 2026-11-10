@@ -106,7 +106,7 @@ Rotas atuais: `/`, `/perfil-profissional`, `/perfil-pessoal`. O Astro gera `404.
 - `public/developers-sanctuary.webp`: ilustração original gerada para a hero; nunca representa uma fotografia da Jessica ou um screenshot de projeto.
 - Fontes e licenças em `public/fonts/`; procedência em `public/ASSETS.md`. Não volte a depender de Google Fonts em tempo de execução.
 - Screenshots reais dos projetos selecionados ainda não foram fornecidos. `Project.image` aceita src, alt, width e height; `demo` é opcional. Não invente os assets ou os links.
-- O menu é um disclosure, sem captura de foco. Funciona sem JavaScript com os links visíveis; com script, fecha ao navegar e com Escape, devolvendo o foco ao botão.
+- O menu é um disclosure, sem captura de foco. Funciona sem JavaScript com os links visíveis; com script, abre um painel vertical que ocupa a tela abaixo do header no mobile, bloqueando a rolagem da página. Fecha ao navegar e com Escape, devolvendo o foco ao botão; também fecha quando o foco sai do header. Ao voltar ao desktop, libera a rolagem e exibe a navegação em linha.
 - A imagem do Pingo permanece visível sem JavaScript; o botão de conquista aparece somente quando seus eventos estão registrados. Use botão nativo, teclado, aria-live e anúncios em inglês marcados com lang=en.
 - Antes de entregar mudanças interativas, confira teclado, mobile, redução de movimento, tema claro/escuro e bloqueio de localStorage no navegador. Os testes estáticos não substituem essa validação.
 
