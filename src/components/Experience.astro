@@ -1,0 +1,31 @@
+---
+import { experience, skills } from '../data/profile'
+import Icon from './Icon.astro'
+---
+<section id="experiencia" class="section">
+  <div class="section-heading"><p class="section-label">Experiência</p><h2>Profundidade técnica.<br />Visão de produto.</h2><p>Da evolução de interfaces às decisões de arquitetura, sempre com atenção ao contexto e a quem usa o que construímos.</p></div>
+  <div class="experience-list">
+    {experience.map(item => <article class="experience-item"><div><p class="experience-period">{item.period}</p><h3>{item.company}</h3><p class="experience-role">{item.role}</p></div><div><p class="experience-description">{item.description}</p><ul class="tags" aria-label={`Tecnologias na ${item.company}`}>{item.technologies.map(tech => <li>{tech}</li>)}</ul></div></article>)}
+  </div>
+</section>
+<section id="skills" class="section">
+  <div class="section-heading"><p class="section-label">Inventário técnico</p><h2>Ferramentas para resolver.<br />Critério para escolher.</h2><p>Interfaces, serviços e dados conectados por uma visão de produto. Estas são as tecnologias que fazem parte da minha prática.</p></div>
+  <div class="skills-grid">{skills.map(skill => <article><Icon name={skill.icon} /><h3>{skill.title}</h3><ul>{skill.technologies.map(tech => <li>{tech}</li>)}</ul></article>)}</div>
+</section>
+<style>
+  .experience-list { display: grid; gap: var(--space-6); }
+  .experience-item { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-7); padding-block: var(--space-6); border-top: 1px solid var(--color-line); }
+  .experience-period { font: 0.7rem/1.7 var(--font-mono); color: var(--color-accent); margin-bottom: var(--space-3); }
+  .experience-item h3 { font-size: 1.7rem; }
+  .experience-role { color: var(--color-muted); margin-top: var(--space-2); font-size: 0.875rem; }
+  .experience-description { color: var(--color-muted); max-width: 62ch; }
+  .tags { display: flex; gap: var(--space-2); flex-wrap: wrap; list-style: none; padding: 0; margin: var(--space-5) 0 0; }
+  .tags li { padding: var(--space-1) var(--space-3); border: 1px solid var(--color-line); border-radius: var(--radius-sm); font: 0.65rem/1.8 var(--font-mono); }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-7); }
+  .skills-grid article { padding-top: var(--space-5); border-top: 1px solid var(--color-line); }
+  .skills-grid :global(svg) { width: 2rem; height: 2rem; color: var(--color-accent); }
+  .skills-grid h3 { margin-top: var(--space-4); font-size: 1.2rem; }
+  .skills-grid ul { list-style: none; padding: 0; display: flex; gap: var(--space-2) var(--space-4); flex-wrap: wrap; margin: var(--space-5) 0 0; }
+  .skills-grid li { color: var(--color-muted); font-size: 0.875rem; }
+  @media (max-width: 700px) { .experience-item { grid-template-columns: 1fr; gap: var(--space-4); } .skills-grid { grid-template-columns: 1fr; gap: var(--space-6); } }
+</style>

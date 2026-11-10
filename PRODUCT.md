@@ -24,7 +24,7 @@ O visitante precisa entender rapidamente o nível de atuação, tecnologias rele
 
 ## Capabilities and Constraints
 
-- Base existente: React, TypeScript, Vite e Tailwind CSS.
+- Base existente: Astro, TypeScript e Tailwind CSS 3, com geração estática de HTML e scripts pequenos para interações.
 - Conteúdo em português do Brasil.
 - O site precisa atender tanto a processos de contratação quanto a contatos para freelas.
 - Não expor informações confidenciais de experiências profissionais ou projetos privados.
@@ -35,6 +35,19 @@ O visitante precisa entender rapidamente o nível de atuação, tecnologias rele
 - Título profissional: Desenvolvedora Full Stack Pleno com foco em Front-end.
 - Tom: objetivo, técnico e humano.
 - Formação em andamento: Pós Tech em Full Stack Development pela FIAP, iniciada em 2025.
+
+## Visual Direction — Dark Mode: Unlocked
+
+- Referência principal: composição fornecida pela Jessica, com hero dividida entre texto e um cenário noturno de desenvolvimento.
+- Atmosfera minimalista, sombria e moderna, com referências discretas a RPGs dark fantasy e jogos 16-bit; não transformar toda a interface em pixel art.
+- Paleta: fundo quase preto, superfícies em roxo escuro, lavanda e acentos quentes. O modo escuro é o padrão; o tema claro existente continua disponível e a preferência fica salva.
+- Tipografia: Space Grotesk nos títulos, Inter nos textos e controles, JetBrains Mono nos metadados e Press Start 2P em pequenos detalhes retrô. Fontes locais WOFF2 com licenças OFL.
+- Marca textual: Jessica Marques // dev. Navegação por Início, Sobre, Projetos, Skills e Contato; preservar também a âncora de experiência e as páginas de perfil.
+- Hero: apresentação objetiva, CTAs Ver projetos/Falar comigo, links GitHub, LinkedIn e currículo, e ilustração em pixel art de uma mesa com lua, livros, lanterna e pinscher preto e caramelo.
+- Pingo é um easter egg opcional: foco/hover ativam “Security system activated.”; clique ou teclado revelam “Achievement unlocked: You survived the Pinscher.”. Nenhum conteúdo profissional depende dessa interação.
+- Jason é o encontro secreto do Save Point: uma patinha abre um painel com o cachorro tigrado, peito/patas brancos e máscara de hóquei. Dar um petisco revela a pose sem máscara e a conquista “Você sobreviveu ao Jason. Ele ganhou um petisco.”. Sem som ou abertura automática; no mobile o painel entra no fluxo abaixo dos contatos.
+- Projetos permanecem baseados em evidências reais. Screenshots e demos só são exibidos quando seus arquivos e URLs forem conhecidos; não usar imagens de outros projetos como substitutas.
+- Sobre/Character Profile, projetos/Selected Quests, experiência, habilidades e contato/Save Point compõem a Home. Sem níveis ou métricas artificiais.
 
 ## Evidence on Hand
 

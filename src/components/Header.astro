@@ -1,0 +1,50 @@
+---
+import ThemeToggle from './ThemeToggle.astro'
+import Icon from './Icon.astro'
+const home = Astro.url.pathname === '/'
+const links = [
+  { id: 'inicio', label: 'Início', icon: 'home' },
+  { id: 'sobre', label: 'Sobre', icon: 'user' },
+  { id: 'projetos', label: 'Projetos', icon: 'gamepad' },
+  { id: 'skills', label: 'Skills', icon: 'stack' },
+  { id: 'contato', label: 'Contato', icon: 'mail' },
+] as const
+---
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="site-brand" href="/" aria-label="Jessica Marques, página inicial">
+      <Icon name="gamepad" class="brand-icon" />
+      <span>Jessica Marques <span class="brand-suffix">// dev</span></span>
+    </a>
+    <div class="header-controls">
+      <ThemeToggle />
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu" hidden><Icon name="menu" /></button>
+    </div>
+    <nav id="main-navigation" aria-label="Navegação principal">
+      {links.map(link => <a href={home ? `#${link.id}` : `/#${link.id}`} data-section={link.id}><Icon name={link.icon} />{link.label}</a>)}
+    </nav>
+  </div>
+</header>
+<script src="../scripts/navigation.ts"></script>
+<style>
+  .site-header { position: sticky; top: 0; z-index: 40; background: var(--color-overlay); border-bottom: 1px solid var(--color-line); }
+  .header-inner { display: flex; align-items: center; gap: var(--space-6); min-height: 86px; }
+  .site-brand { display: flex; align-items: center; gap: var(--space-4); font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .brand-icon { width: 2.4rem; height: 2.4rem; color: var(--color-accent); }
+  .brand-suffix { color: var(--color-accent); margin-left: var(--space-3); font-family: var(--font-mono); }
+  nav { display: flex; align-self: stretch; gap: var(--space-5); margin-left: auto; }
+  nav a { display: flex; align-items: center; gap: var(--space-2); position: relative; font-size: 0.875rem; text-decoration: none; }
+  nav a::after { content: ''; position: absolute; bottom: var(--space-3); left: 0; right: 0; height: 2px; background: var(--color-primary); transform: scaleX(0); transition: transform var(--motion-normal); }
+  nav a:hover, nav a[aria-current] { color: var(--color-accent); }
+  nav a:hover::after, nav a[aria-current]::after { transform: scaleX(1); }
+  .header-controls { display: flex; gap: var(--space-2); order: 3; }
+  .menu-toggle { width: 44px; height: 44px; display: grid; place-items: center; color: var(--color-ink); border: 1px solid var(--color-line); border-radius: var(--radius-sm); }
+  @media (max-width: 1100px) {
+    .header-inner { flex-wrap: wrap; justify-content: space-between; gap: 0; min-height: 76px; }
+    .header-controls { order: 0; }
+    nav { width: 100%; order: 3; margin: 0; padding-block: var(--space-4); gap: var(--space-3); flex-wrap: wrap; }
+    nav a { min-height: 44px; padding-inline: var(--space-3); }
+    nav a::after { bottom: 0; }
+  }
+  @media (max-width: 480px) { .site-brand { font-size: 0.9rem; gap: var(--space-2); } .brand-suffix { display: none; } .brand-icon { width: 1.8rem; height: 1.8rem; } }
+</style>

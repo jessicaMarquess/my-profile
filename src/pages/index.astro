@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+import About from '../components/About.astro'
+import ProjectCard from '../components/ProjectCard.astro'
+import Experience from '../components/Experience.astro'
+import Contact from '../components/Contact.astro'
+import { projects } from '../data/projects'
+---
+<Layout>
+  <main id="conteudo" class="container">
+    <Hero />
+    <About />
+    <section id="projetos" class="section">
+      <div class="section-heading"><p class="section-label">Selected quests</p><h2>Projetos que mostram<br />como eu trabalho.</h2><p>Problemas reais, decisões de engenharia e responsabilidade pelo que é entregue. Conheça os projetos e explore o código.</p></div>
+      <div class="project-grid">{projects.map(project => <ProjectCard project={project} />)}</div>
+    </section>
+    <Experience />
+    <Contact />
+  </main>
+</Layout>

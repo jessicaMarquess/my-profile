@@ -1,0 +1,29 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import paw from '@tabler/icons/outline/paw.svg?raw'
+import arrow from '@tabler/icons/outline/arrow-up-right.svg?raw'
+import download from '@tabler/icons/outline/download.svg?raw'
+import sun from '@tabler/icons/outline/sun.svg?raw'
+import moon from '@tabler/icons/outline/moon.svg?raw'
+import home from '@tabler/icons/outline/home.svg?raw'
+import user from '@tabler/icons/outline/user.svg?raw'
+import gamepad from '@tabler/icons/outline/device-gamepad-2.svg?raw'
+import stack from '@tabler/icons/outline/stack-2.svg?raw'
+import mail from '@tabler/icons/outline/mail.svg?raw'
+import code from '@tabler/icons/outline/code.svg?raw'
+import target from '@tabler/icons/outline/target-arrow.svg?raw'
+import hourglass from '@tabler/icons/outline/hourglass.svg?raw'
+import github from '@tabler/icons/outline/brand-github.svg?raw'
+import linkedin from '@tabler/icons/outline/brand-linkedin.svg?raw'
+import file from '@tabler/icons/outline/file-text.svg?raw'
+import menu from '@tabler/icons/outline/menu-2.svg?raw'
+import shield from '@tabler/icons/outline/shield-check.svg?raw'
+import player from '@tabler/icons/outline/player-play.svg?raw'
+
+const icons = { paw, 'arrow-up-right': arrow, download, sun, moon, home, user, gamepad, stack, mail, code, target, hourglass, github, linkedin, file, menu, shield, player }
+export type IconName = keyof typeof icons
+interface Props extends HTMLAttributes<'span'> { name: IconName }
+const { name, ...attributes } = Astro.props
+---
+<span aria-hidden="true" {...attributes} set:html={icons[name]} />
+<style>span { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; } span :global(svg) { width: 100%; height: 100%; } </style>

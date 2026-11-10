@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Icon from '../components/Icon.astro'
+import { experience, skills } from '../data/profile'
+---
+<Layout title="Perfil profissional — Jessica Marques" description="Trajetória de Jessica Marques, desenvolvedora Full Stack Pleno com foco em front-end, Design Systems e arquitetura de aplicações.">
+  <main id="conteudo" class="profile-content">
+    <p class="section-label">Trajetória profissional</p>
+    <h1>Da curiosidade à construção de produtos.</h1>
+    <p>Desde minha infância, a tecnologia desperta minha curiosidade. Atuo profissionalmente desde setembro de 2021 e, desde 2023, como desenvolvedora Full Stack Pleno na Serena Energia.</p>
+    <p>Meu trabalho combina React, TypeScript, front-end, integrações e desenvolvimento de APIs. Participei da construção do Design System da empresa, com Design Atômico, Storybook e testes automatizados. Também tenho experiência com Figma e com o trabalho em times que utilizam Kanban.</p>
+    <p>Continuo aprofundando minha prática de engenharia e produto na Pós Tech em Full Stack Development da FIAP, iniciada em 2025.</p>
+    <a class="button" href="/CV___versão_ptbr-1.pdf" download="CV___versão_ptbr.pdf"><Icon name="download" />Baixar meu currículo</a>
+    {experience.map(item => <section class="profile-experience"><p class="section-label">{item.period}</p><h2>{item.company}</h2><p>{item.role}</p><p>{item.description}</p></section>)}
+    <section class="profile-experience"><h2>Tecnologias e especialidades</h2><ul>{skills.map(skill => <li><strong>{skill.title}:</strong> {skill.technologies.join(', ')}.</li>)}</ul></section>
+    <a class="text-link" href="/">Voltar ao portfólio <Icon name="arrow-up-right" /></a>
+  </main>
+</Layout>
+<style>.profile-experience { padding-block: var(--space-6); border-top: 1px solid var(--color-line); } .profile-experience h2 { margin-bottom: var(--space-4); font-size: 1.7rem; }</style>

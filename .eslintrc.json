@@ -1,3 +1,49 @@
 {
-  "extends": "@rocketseat/eslint-config/react"
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:astro/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "ignorePatterns": [
+    "dist/",
+    ".astro/"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.astro"
+      ],
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [
+          ".astro"
+        ]
+      },
+      "processor": "astro/client-side-ts"
+    },
+    {
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "rules": {
+        "no-unused-vars": [
+          "error",
+          {
+            "varsIgnorePattern": "^[A-Z]"
+          }
+        ]
+      }
+    }
+  ]
 }

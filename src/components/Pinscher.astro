@@ -1,0 +1,22 @@
+---
+import Icon from './Icon.astro'
+---
+<div class="security" data-state="rest">
+  <button id="security-button" type="button" aria-label="Fazer carinho no Pingo, Head of Security" aria-describedby="security-status" hidden>
+    <Icon name="shield" />
+    <span>Pingo <span class="security-title">// Head of Security</span></span>
+  </button>
+  <p id="security-status" aria-live="polite" lang="en"></p>
+</div>
+<script>
+  import { setupSecurity } from '../scripts/security'
+  setupSecurity()
+</script>
+<style>
+  .security { position: absolute; left: 12%; bottom: 7%; z-index: 3; width: min(26rem, 85%); }
+  button { display: inline-flex; align-items: center; gap: var(--space-2); border: 1px solid var(--color-line); background: var(--color-overlay); color: var(--color-accent); border-radius: var(--radius-sm); padding: var(--space-3); font: 0.65rem/1.5 var(--font-mono); min-height: 44px; }
+  p { min-height: 3.4em; font: 0.65rem/1.7 var(--font-mono); color: var(--color-accent); background: var(--color-overlay); border-radius: var(--radius-sm); margin-top: var(--space-2); padding-inline: var(--space-3); }
+  p:empty { visibility: hidden; }
+  @media (prefers-reduced-motion: no-preference) { button:hover :global(svg), button:focus-visible :global(svg) { transform: rotate(-8deg); transition: transform var(--motion-normal); } }
+  @media (max-width: 700px) { .security { left: var(--page-gutter); bottom: var(--space-3); } }
+</style>

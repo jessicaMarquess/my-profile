@@ -1,0 +1,31 @@
+---
+import Icon from './Icon.astro'
+import type { Project } from '../data/projects'
+interface Props { project: Project }
+const { project } = Astro.props
+---
+<article class="project-card">
+  {project.image && <img class="project-image" src={project.image.src} alt={project.image.alt} width={project.image.width} height={project.image.height} loading="lazy" decoding="async" />}
+  <div class="project-body">
+    <div class="project-topline"><span>{project.kind}</span><Icon name="code" /></div>
+    <h3>{project.name}</h3>
+    <p class="project-description">{project.description}</p>
+    <p class="project-detail">{project.details}</p>
+    <p class="project-stack">{project.stack}</p>
+    <div class="project-links"><a href={project.url} target="_blank" rel="noreferrer" aria-label={`Abrir ${project.name} no GitHub`}>Ver repositório <Icon name="arrow-up-right" /></a>{project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Demonstração <Icon name="arrow-up-right" /></a>}</div>
+  </div>
+</article>
+<style>
+  .project-card { border: 1px solid var(--color-line); border-radius: var(--radius-md); background: var(--color-panel); overflow: hidden; transition: border-color var(--motion-normal); }
+  .project-card:hover { border-color: var(--color-primary); }
+  .project-image { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-bottom: 1px solid var(--color-line); }
+  .project-body { padding: var(--space-6); }
+  .project-topline { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); color: var(--color-accent); font: 0.65rem/1.8 var(--font-mono); }
+  h3 { font-size: 2rem; margin-top: var(--space-6); letter-spacing: -0.03em; }
+  .project-description { margin-top: var(--space-4); max-width: 46ch; }
+  .project-detail { color: var(--color-muted); font-size: 0.875rem; margin-top: var(--space-3); }
+  .project-stack { color: var(--color-accent); font: 0.65rem/2 var(--font-mono); margin-top: var(--space-6); }
+  .project-links { display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-5); border-top: 1px solid var(--color-line); padding-top: var(--space-4); }
+  .project-links a { display: inline-flex; align-items: center; gap: var(--space-2); font-size: 0.875rem; text-decoration: none; }
+  .project-links a:hover { color: var(--color-accent); }
+</style>

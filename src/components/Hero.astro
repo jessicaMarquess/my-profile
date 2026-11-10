@@ -1,0 +1,67 @@
+---
+import Icon from './Icon.astro'
+import Pinscher from './Pinscher.astro'
+---
+<section id="inicio" class="hero">
+  <div class="hero-copy">
+    <p class="terminal-label">&gt; hello, world<span class="cursor" aria-hidden="true">_</span></p>
+    <h1>Jessica Marques<span class="name-cursor" aria-hidden="true">|</span></h1>
+    <p class="hero-role">Desenvolvedora Full Stack</p>
+    <p class="hero-summary">Desenvolvo aplicações web completas, com foco em boas experiências, código de qualidade e soluções que realmente resolvem problemas.</p>
+    <div class="action-row hero-actions">
+      <a class="button button--primary" href="#projetos"><Icon name="player" />Ver projetos</a>
+      <a class="button" href="#contato"><Icon name="mail" />Falar comigo</a>
+    </div>
+    <div class="social-links" role="group" aria-label="Redes sociais e currículo">
+      <a href="https://github.com/jessicaMarquess" target="_blank" rel="noreferrer" aria-label="GitHub de Jessica Marques"><Icon name="github" /></a>
+      <a href="https://www.linkedin.com/in/jessica-maria-marques/" target="_blank" rel="noreferrer" aria-label="LinkedIn de Jessica Marques"><Icon name="linkedin" /></a>
+      <a href="/curriculo-jessica-marques.pdf" download aria-label="Baixar currículo"><Icon name="file" /></a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img class="sanctuary" src="/developers-sanctuary.webp" width="1536" height="1024" fetchpriority="high" alt="Ilustração em pixel art: mesa de desenvolvimento com livros, luz de lanterna, um pinscher preto e caramelo e uma janela com lua e castelo ao fundo." />
+    <Pinscher />
+  </div>
+</section>
+<div class="hero-facts" role="group" aria-label="Resumo de atuação">
+  <div><Icon name="hourglass" /><p><strong>Desde 2021</strong><span>construindo experiências digitais</span></p></div>
+  <div><Icon name="code" /><p><strong>React · TypeScript · Node.js</strong><span>da interface à arquitetura</span></p></div>
+  <div><Icon name="target" /><p><strong>Foco</strong><span>Performance · Acessibilidade · UX</span></p></div>
+</div>
+<style>
+  .hero { position: relative; display: grid; grid-template-columns: 1fr 1.08fr; align-items: center; min-height: min(660px, 80vh); padding-block: var(--space-7); gap: var(--space-6); }
+  .hero-copy { position: relative; z-index: 2; padding-block: var(--space-6); }
+  .terminal-label { font: 0.875rem/1.7 var(--font-mono); color: var(--color-accent); margin-bottom: var(--space-5); }
+  h1 { font-size: clamp(2.8rem, 4.25vw, 4.5rem); letter-spacing: -0.055em; white-space: nowrap; }
+  .name-cursor { color: var(--color-primary); font-weight: 400; margin-left: var(--space-1); }
+  .hero-role { font: 0.8rem/1.9 var(--font-mono); letter-spacing: 0.23em; text-transform: uppercase; margin-top: var(--space-5); }
+  .hero-summary { font-size: clamp(0.95rem, 1.25vw, 1.12rem); max-width: 47ch; margin-top: var(--space-5); color: var(--color-muted); }
+  .hero-actions { margin-top: var(--space-6); }
+  .hero-actions .button { min-width: 185px; }
+  .social-links { display: flex; gap: var(--space-3); margin-top: var(--space-5); }
+  .social-links a { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); color: var(--color-accent); transition: background var(--motion-fast); }
+  .social-links a:hover { background: var(--color-panel-strong); }
+  .hero-visual { position: relative; align-self: stretch; display: grid; align-items: center; margin-right: calc(-1 * var(--page-gutter)); }
+  .sanctuary { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; mask-image: linear-gradient(to right, transparent, black 10%, black 96%, transparent); }
+  .hero-facts { display: grid; grid-template-columns: 0.9fr 1.2fr 1fr; padding-block: var(--space-5); margin-bottom: var(--space-8); border-block: 1px solid var(--color-line); }
+  .hero-facts > div { display: flex; gap: var(--space-4); align-items: center; padding-inline: var(--space-6); }
+  .hero-facts > div:first-child { padding-left: 0; }
+  .hero-facts > div + div { border-left: 1px solid var(--color-line); }
+  .hero-facts :global(svg) { width: 2rem; height: 2rem; color: var(--color-accent); }
+  .hero-facts strong, .hero-facts span { display: block; }
+  .hero-facts strong { font-family: var(--font-display); font-size: 1rem; }
+  .hero-facts p > span { color: var(--color-muted); font-size: 0.75rem; }
+  @media (max-width: 1000px) { h1 { white-space: normal; } .hero-facts > div { padding-inline: var(--space-4); } }
+  @media (max-width: 700px) {
+    .hero { grid-template-columns: 1fr; gap: 0; padding-top: var(--space-6); min-height: auto; }
+    h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+    .hero-visual { margin-inline: calc(-1 * var(--page-gutter)); }
+    .hero-copy { padding-block: var(--space-4); }
+    .hero-role { font-size: 0.7rem; letter-spacing: 0.16em; }
+    .hero-actions { gap: var(--space-3); }
+    .hero-actions .button { min-width: 0; flex: 1; padding-inline: var(--space-3); font-size: 0.875rem; }
+    .hero-facts { grid-template-columns: 1fr; margin-bottom: 0; padding: var(--space-3) 0; }
+    .hero-facts > div, .hero-facts > div:first-child { padding: var(--space-4) 0; border: 0; }
+    .hero-facts > div + div { border-top: 1px solid var(--color-line); }
+  }
+</style>

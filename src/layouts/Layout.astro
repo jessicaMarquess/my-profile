@@ -1,0 +1,64 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import '../index.css'
+
+interface Props {
+  title?: string
+  description?: string
+  noindex?: boolean
+}
+
+const {
+  title = 'Jessica Marques — Desenvolvedora Full Stack',
+  description = 'Jessica Marques — Desenvolvedora Full Stack Pleno. Produtos digitais, front-end e arquitetura de aplicações.',
+  noindex = false,
+} = Astro.props
+const canonical = new URL(Astro.url.pathname, Astro.site)
+const image = new URL('/profile-github.jpg', Astro.site)
+---
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Jessica Marques" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content="Jessica Marques, Desenvolvedora Full Stack" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <script is:inline>
+      // Apply the theme before the first paint, including when storage is blocked.
+      let theme
+      try {
+        theme = localStorage.getItem('theme')
+      } catch {
+        theme = null
+      }
+      const dark = theme !== 'light'
+      document.documentElement.classList.toggle('dark', dark)
+    </script>
+  </head>
+  <body>
+    <div class="site-frame">
+      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>

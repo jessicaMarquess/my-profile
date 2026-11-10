@@ -1,0 +1,48 @@
+---
+import Icon from './Icon.astro'
+---
+<div class="jason-discovery">
+  <button id="jason-trigger" class="secret-trigger" type="button" aria-controls="jason-dialog" aria-expanded="false" hidden>
+    <Icon name="paw" /><span>Quem está aí?</span>
+  </button>
+  <dialog id="jason-dialog" class="jason-panel" aria-labelledby="jason-title" aria-describedby="jason-description" data-fed="false">
+    <button id="jason-close" class="close-button" type="button" aria-label="Fechar encontro com Jason" autofocus>×</button>
+    <p class="encounter-label">Encontro secreto</p>
+    <h3 id="jason-title">Jason apareceu.</h3>
+    <div id="jason-art" class="jason-art" role="img" aria-label="Jason, cachorro tigrado com peito e patas brancas, usando uma máscara de hóquei de lado.">
+      <img src="/jason-sprites.webp" alt="" width="1024" height="512" loading="lazy" decoding="async" />
+    </div>
+    <p id="jason-description">Perigoso apenas para seus petiscos.</p>
+    <p id="jason-status" class="jason-status" aria-live="polite"></p>
+    <button id="jason-treat" class="button button--primary" type="button">Dar um petisco</button>
+  </dialog>
+</div>
+<script>
+  import { setupJason } from '../scripts/jason'
+  setupJason()
+</script>
+<style>
+  .jason-discovery { margin-top: var(--space-6); }
+  .secret-trigger { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; color: var(--color-muted); padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); font: 0.7rem/1.6 var(--font-mono); }
+  .secret-trigger:hover, .secret-trigger[aria-expanded='true'] { color: var(--color-accent); background: var(--color-panel); }
+  .jason-panel { position: fixed; inset: auto var(--space-5) var(--space-5) auto; width: min(300px, calc(100vw - var(--space-6))); max-height: calc(100dvh - var(--space-7)); overflow-y: auto; margin: 0; padding: var(--space-5); background: var(--color-panel); color: var(--color-ink); border: 1px solid var(--color-primary); border-radius: var(--radius-md); box-shadow: var(--shadow-panel); z-index: 45; text-align: center; }
+  .jason-panel[open] { display: grid; justify-items: center; }
+  .close-button { position: absolute; right: var(--space-1); top: var(--space-1); width: 44px; height: 44px; font-size: 1.6rem; color: var(--color-muted); border-radius: var(--radius-sm); }
+  .close-button:hover { color: var(--color-accent); }
+  .encounter-label { font: 0.6rem/1.8 var(--font-mono); color: var(--color-accent); padding-right: var(--space-5); }
+  h3 { font-size: 1.4rem; margin-top: var(--space-2); }
+  .jason-art { width: 192px; aspect-ratio: 1; overflow: hidden; margin-top: var(--space-3); }
+  .jason-art img { display: block; width: 200%; max-width: none; height: 100%; object-fit: fill; image-rendering: pixelated; }
+  .jason-panel[data-fed='true'] .jason-art img { transform: translateX(-50%); }
+  #jason-description { font-size: 0.8rem; color: var(--color-muted); }
+  .jason-status { min-height: 3.6em; margin-top: var(--space-3); font: 0.65rem/1.8 var(--font-mono); color: var(--color-accent); }
+  .jason-panel .button { width: 100%; font-size: 0.85rem; margin-top: var(--space-4); }
+  .jason-panel .button:disabled { cursor: default; opacity: 0.85; transform: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .jason-panel[open] { animation: jason-appear var(--motion-normal) var(--ease-out); }
+    @keyframes jason-appear { from { opacity: 0; translate: 0 var(--space-4); } to { opacity: 1; translate: 0 0; } }
+  }
+  @media (max-width: 700px) {
+    .jason-panel { position: relative; inset: auto; margin: var(--space-5) auto 0; width: min(100%, 320px); max-height: none; }
+  }
+</style>
