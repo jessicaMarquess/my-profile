@@ -34,7 +34,7 @@ O visitante precisa entender rapidamente o nível de atuação, tecnologias rele
 - Nome: Jessica Marques.
 - Título profissional: Desenvolvedora Full Stack Pleno com foco em Front-end.
 - Tom: objetivo, técnico e humano.
-- Formação em andamento: Pós Tech em Full Stack Development pela FIAP, iniciada em 2025.
+- Formação concluída: Pós Tech em Full Stack Development pela FIAP.
 
 ## Visual Direction — Dark Mode: Unlocked
 

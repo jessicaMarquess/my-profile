@@ -6,6 +6,7 @@ Este arquivo reúne as instruções compartilhadas do repositório. Mantenha-o a
 
 - Portfólio pessoal de Jessica Marques, voltado a recrutadores e potenciais clientes de projetos web.
 - Apresenta trajetória profissional, projetos selecionados, redes sociais, contato e currículo.
+- Formação confirmada pela Jessica: Pós Tech em Full Stack Development pela FIAP concluída. Não apresentar como curso em andamento nem inventar uma data de conclusão.
 - Leia [PRODUCT.md](./PRODUCT.md) antes de alterar conteúdo, posicionamento ou experiência visual. Ele documenta o público, a marca, as evidências disponíveis e os princípios do produto.
 - Conteúdo e comunicação em português brasileiro, com tom claro, técnico e humano.
 - Não invente métricas, experiências, responsabilidades ou informações sobre projetos. Não exponha informações confidenciais de trabalhos profissionais ou privados.

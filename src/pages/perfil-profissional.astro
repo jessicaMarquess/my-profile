@@ -9,7 +9,7 @@ import { experience, skills } from '../data/profile'
     <h1>Da curiosidade à construção de produtos.</h1>
     <p>Desde minha infância, a tecnologia desperta minha curiosidade. Atuo profissionalmente desde setembro de 2021 e, desde 2023, como desenvolvedora Full Stack Pleno na Serena Energia.</p>
     <p>Meu trabalho combina React, TypeScript, front-end, integrações e desenvolvimento de APIs. Participei da construção do Design System da empresa, com Design Atômico, Storybook e testes automatizados. Também tenho experiência com Figma e com o trabalho em times que utilizam Kanban.</p>
-    <p>Continuo aprofundando minha prática de engenharia e produto na Pós Tech em Full Stack Development da FIAP, iniciada em 2025.</p>
+    <p>Concluí a Pós Tech em Full Stack Development da FIAP, aprofundando minha prática de engenharia e produto.</p>
     <a class="button" href="/CV___versão_ptbr-1.pdf" download="CV___versão_ptbr.pdf"><Icon name="download" />Baixar meu currículo</a>
     {experience.map(item => <section class="profile-experience"><p class="section-label">{item.period}</p><h2>{item.company}</h2><p>{item.role}</p><p>{item.description}</p></section>)}
     <section class="profile-experience"><h2>Tecnologias e especialidades</h2><ul>{skills.map(skill => <li><strong>{skill.title}:</strong> {skill.technologies.join(', ')}.</li>)}</ul></section>
